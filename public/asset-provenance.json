@@ -1,0 +1,94 @@
+[
+  {
+    "file": "public/images/logo-96.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Flogo-96.png&w=32&q=75"
+  },
+  {
+    "file": "public/images/orange-pyramid.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Forange-pyramid.png&w=384&q=75"
+  },
+  {
+    "file": "public/images/purple-sphere.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fpurple-sphere.png&w=384&q=75"
+  },
+  {
+    "file": "public/images/lime-object.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Flime-object.png&w=384&q=75"
+  },
+  {
+    "file": "public/images/turquoise-star.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fturquoise-star.png&w=384&q=75"
+  },
+  {
+    "file": "public/images/blue-cylinder.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fblue-cylinder.png&w=384&q=75"
+  },
+  {
+    "file": "public/images/profile.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fprofile.jpg&w=256&q=75"
+  },
+  {
+    "file": "public/images/yellow-cube.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fyellow-cube.png&w=384&q=75"
+  },
+  {
+    "file": "public/icons/react.svg",
+    "source": "https://cdn.simpleicons.org/react"
+  },
+  {
+    "file": "public/images/purple-cube.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fpurple-cube.png&w=128&q=75"
+  },
+  {
+    "file": "public/images/blue-pyramid.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fshapes%2Fblue-pyramid.png&w=128&q=75"
+  },
+  {
+    "file": "public/icons/nextdotjs.svg",
+    "source": "https://cdn.simpleicons.org/nextdotjs"
+  },
+  {
+    "file": "public/icons/nodedotjs.svg",
+    "source": "https://cdn.simpleicons.org/nodedotjs"
+  },
+  {
+    "file": "public/icons/framer.svg",
+    "source": "https://cdn.simpleicons.org/framer"
+  },
+  {
+    "file": "public/icons/figma.svg",
+    "source": "https://cdn.simpleicons.org/figma"
+  },
+  {
+    "file": "public/icons/typescript.svg",
+    "source": "https://cdn.simpleicons.org/typescript"
+  },
+  {
+    "file": "public/icons/tailwindcss.svg",
+    "source": "https://cdn.simpleicons.org/tailwindcss"
+  },
+  {
+    "file": "public/icons/git.svg",
+    "source": "https://cdn.simpleicons.org/git"
+  },
+  {
+    "file": "public/icons/greensock.svg",
+    "source": "https://cdn.simpleicons.org/greensock"
+  },
+  {
+    "file": "public/images/eiyaiy.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fprojects%2Feiyaiy.jpg&w=640&q=75"
+  },
+  {
+    "file": "public/images/rounderone.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fprojects%2Frounderone.jpg&w=640&q=75"
+  },
+  {
+    "file": "public/images/ejen.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fprojects%2Fejen.jpg&w=640&q=75"
+  },
+  {
+    "file": "public/images/artvition.webp",
+    "source": "https://wildanoel.dev/_next/image?url=%2Fprojects%2Fartvition.jpg&w=640&q=75"
+  }
+]
