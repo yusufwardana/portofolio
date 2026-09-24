@@ -1,60 +1,130 @@
-export const navigation = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Stack", href: "#stack" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Bug Bounty", href: "https://wildanoel.dev/bug-bounty" },
-  { label: "Design", href: "https://wildanoel.dev/design" },
-  { label: "Router", href: "https://router.wildanoel.dev/" },
-] as const;
-
-export interface Tool {
-  name: string;
-  icon?: string;
-  description: string;
-}
-
-export const tools: Tool[] = [
-  { name: "React", icon: "react", description: "My default for building interfaces. Component thinking, hooks, and a strong ecosystem let me move fast without losing structure." },
-  { name: "Next.js", icon: "nextdotjs", description: "The framework I reach for on real products. Server components, routing, and image handling out of the box, ready to deploy." },
-  { name: "TypeScript", icon: "typescript", description: "Confidence as a project grows. Clear types make components easier to understand, changes safer, and collaboration smoother." },
-  { name: "Tailwind CSS", icon: "tailwindcss", description: "My styling toolkit for translating design into responsive interfaces. Consistent spacing, thoughtful typography, and fast iteration without losing control." },
-  { name: "Framer Motion", icon: "framer", description: "The motion layer for my React projects. From small hover details to expressive page transitions, it helps every interaction feel natural." },
-  { name: "Figma", icon: "figma", description: "Where ideas become interfaces. I use Figma for visual exploration, interactive prototypes, and shared design systems that carry through to code." },
-  { name: "Node.js", icon: "nodedotjs", description: "JavaScript beyond the browser. APIs, tooling, and integrations that connect a polished frontend to the services behind it." },
-  { name: "GSAP", icon: "greensock", description: "For the moments that need a little more choreography. Precise timelines and scroll-driven animation bring ambitious creative ideas to life." },
-  { name: "Adobe Illustrator", description: "My canvas for brand identities, custom typography, and vector artwork. Turning a strong idea into a visual language that scales." },
-  { name: "Git", icon: "git", description: "A dependable history of every idea and iteration. Small commits, clear branches, and thoughtful collaboration keep projects moving forward." },
-];
-
-export const services = [
-  { title: "Frontend Development", description: "Turning designs into fast, accessible, production-ready interfaces. I build with React, Next.js, and TypeScript, focusing on clean architecture, reusable components, and interactions that feel effortless across every device." },
-  { title: "Brand & Identity Design", description: "Building a visual language that feels unmistakably yours. From logos and typography to color and brand guidelines, I create cohesive identities with personality and purpose." },
-  { title: "Web Design & UI/UX", description: "Designing intuitive, expressive digital experiences. I translate real user needs into thoughtful layouts, clear journeys, and interfaces that balance beauty with usability." },
-  { title: "Motion & Interaction", description: "Making interfaces feel alive through purposeful animation. Subtle feedback, fluid transitions, and carefully choreographed moments guide people through an experience." },
-  { title: "Design Systems", description: "Creating a shared foundation for consistent products. Reusable components, design tokens, and practical documentation help teams move faster while keeping every detail connected." },
-  { title: "Creative Development", description: "Exploring the space where design meets code. Interactive experiments, playful graphics, and unconventional web experiences turn a distinctive idea into something people remember." },
-];
-
-export interface Project {
-  name: string;
-  category: string;
-  year: number;
-  description: string;
-  tags: string[];
-  image: string;
+export interface NavigationItem {
+  label: string;
   href: string;
 }
 
-export const projects: Project[] = [
-  { name: "Eiyaiy", category: "AI Data Platform", year: 2026, description: "A platform that turns the messy public web into clean, reliable data for AI. Landing, docs, and dashboard built for speed and clarity.", tags: ["AI", "Web Data", "SaaS"], image: "eiyaiy", href: "https://eiyaiy.xyz/" },
-  { name: "RounderOne", category: "Developer Tool", year: 2026, description: "One API to search, scrape, map, and crawl any public page into clean, LLM-ready Markdown. Guarded endpoints that return source URLs and metadata.", tags: ["Next.js", "API", "LLM"], image: "rounderone", href: "https://rounderone.app/" },
-  { name: "Ejen Tech", category: "AI Product", year: 2026, description: "An AI customer-service engine that spots buying signals in every conversation and turns support into revenue. Bold, conversion-focused marketing site.", tags: ["AI", "SaaS", "Conversion"], image: "ejen", href: "https://ejen.tech/" },
-  { name: "Artvition", category: "Web Agency", year: 2026, description: "A professional web-development studio offering landing pages, company profiles, online stores, and custom web apps. Fast delivery, modern design.", tags: ["Web Design", "Agency", "React"], image: "artvition", href: "https://artvition.my.id/" },
+export interface Tool {
+  name: string;
+  category: "Frontend" | "Backend" | "Database" | "Infrastructure" | "Automation" | "AI" | "Tools";
+  description: string;
+}
+
+export interface Capability {
+  title: string;
+  description: string;
+}
+
+export interface Project {
+  title: string;
+  slug: string;
+  year: number | string;
+  category: string;
+  description: string;
+  problem: string;
+  role: string;
+  stack: string[];
+  visual: "cyan" | "lime" | "violet" | "orange";
+  url?: string;
+  github?: string;
+  featured: boolean;
+  status: "Concept" | "Prototype" | "In development" | "Active";
+}
+
+export interface LabEntry {
+  title: string;
+  type: string;
+  description: string;
+  status: "Exploring" | "Prototype" | "In progress";
+}
+
+export const navigation: NavigationItem[] = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Stack", href: "#stack" },
+  { label: "Lab", href: "#lab" },
+  { label: "Contact", href: "#contact" },
 ];
 
-export const testimonials = [
-  { quote: "Wildan rebuilt our brand and our marketing site from the ground up. He translated a vague brief into a clear visual language and shipped a site that loads fast and feels premium. He is rare in that he thinks like a designer and executes like an engineer.", name: "Mitchael", role: "Product Lead, Eiyaiy", color: "#ff6035" },
-  { quote: "He owned the frontend for a full product launch, from design system to production code. Clean components, considered motion, and zero drama under deadline. I would bring him onto any team without hesitation.", name: "Arif Santoso", role: "Founder, Artvition", color: "#357bf6" },
+export const tools: Tool[] = [
+  { name: "Laravel", category: "Backend", description: "A practical foundation for building maintainable web applications, internal systems, and APIs." },
+  { name: "PHP", category: "Backend", description: "A dependable language for turning product requirements into focused, useful server-side software." },
+  { name: "Next.js", category: "Frontend", description: "A flexible React framework for fast interfaces, content-driven sites, and full-stack experiments." },
+  { name: "React", category: "Frontend", description: "Component-based UI engineering for interfaces that stay understandable as they grow." },
+  { name: "TypeScript", category: "Tools", description: "Types that make product code easier to navigate, change, and reason about." },
+  { name: "PostgreSQL", category: "Database", description: "Relational data modeling for applications that need clear structure and trustworthy queries." },
+  { name: "Docker", category: "Infrastructure", description: "Reproducible environments for moving an idea from a local machine toward deployment." },
+  { name: "MikroTik", category: "Infrastructure", description: "Network tooling and integrations for software that connects with real operational infrastructure." },
+  { name: "Node.js", category: "Automation", description: "A useful runtime for scripts, integrations, data workflows, and small tools that remove repetitive work." },
+  { name: "AI APIs", category: "AI", description: "A place to explore practical AI features that support a product instead of obscuring it." },
+];
+
+export const capabilities: Capability[] = [
+  { title: "Web Applications", description: "Product interfaces and full-stack applications that turn a workflow into something people can actually use." },
+  { title: "Backend Systems", description: "APIs, data models, and internal tools designed around clear responsibilities and useful outcomes." },
+  { title: "Automation", description: "Small systems that connect services, reduce repetitive work, and make operations easier to observe." },
+  { title: "AI Integration", description: "Experiments with AI APIs and intelligent workflows grounded in a real product or operational problem." },
+  { title: "Network Tools", description: "Software ideas that sit close to infrastructure, monitoring, and the practical needs of connected systems." },
+  { title: "Product Experiments", description: "Focused prototypes used to test a direction, learn quickly, and decide what deserves a deeper build." },
+];
+
+export const projects: Project[] = [
+  {
+    title: "CosmicLink",
+    slug: "cosmiclink",
+    year: "In progress",
+    category: "ISP operations platform",
+    description: "An all-in-one direction for ISP operations, customer workflows, billing, monitoring, and network automation.",
+    problem: "ISP operations often live across disconnected tools and manual handoffs.",
+    role: "Product direction and engineering exploration.",
+    stack: ["Web application", "Automation", "MikroTik"],
+    visual: "cyan",
+    featured: true,
+    status: "In development",
+  },
+  {
+    title: "CELMS",
+    slug: "celms",
+    year: "Prototype",
+    category: "Library platform",
+    description: "A modern direction for library management and a public catalog experience, designed around clarity for both staff and readers.",
+    problem: "Library information should be easier to discover, manage, and keep current.",
+    role: "System design and product prototyping.",
+    stack: ["Catalog", "Administration", "PWA direction"],
+    visual: "lime",
+    featured: true,
+    status: "Prototype",
+  },
+  {
+    title: "RADAR",
+    slug: "radar",
+    year: "Exploring",
+    category: "Public-data intelligence",
+    description: "An exploration of monitoring public data, detecting change, and turning signals into something easier to understand.",
+    problem: "Useful public signals are often scattered, delayed, or difficult to compare over time.",
+    role: "Concept development and technical exploration.",
+    stack: ["Data ingestion", "Change detection", "Signals"],
+    visual: "violet",
+    featured: false,
+    status: "Concept",
+  },
+  {
+    title: "CosmicStudio",
+    slug: "cosmicstudio",
+    year: "Exploring",
+    category: "Creative production system",
+    description: "An AI-assisted creative workflow concept for moving from rough direction to useful production output.",
+    problem: "Creative work benefits from faster iteration without losing human judgment or intent.",
+    role: "Product concept and experimentation.",
+    stack: ["AI-assisted", "Workflow", "Prototype"],
+    visual: "orange",
+    featured: false,
+    status: "Concept",
+  },
+];
+
+export const labEntries: LabEntry[] = [
+  { title: "Automation sketches", type: "Workflow", description: "Small experiments that connect tools and make recurring work less repetitive.", status: "Exploring" },
+  { title: "AI product notes", type: "AI", description: "Testing where AI can make a product more useful, observable, and human-readable.", status: "In progress" },
+  { title: "Network experiments", type: "Infrastructure", description: "Learning from the edge where software meets connected devices, traffic, and operations.", status: "Prototype" },
 ];

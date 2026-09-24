@@ -1,5 +1,5 @@
 {
-  "name": "wildanoel-portfolio-recreation",
+  "name": "yusuf-wardana-portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "source": "node scripts/export-source.mjs"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fontsource-variable/manrope": "latest",

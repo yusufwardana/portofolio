@@ -70,7 +70,7 @@ export default function Navbar() {
         <button className="theme-toggle icon-button" aria-label={`Switch to ${dark ? "light" : "dark"} theme`} onClick={toggleTheme}>
           {dark ? <Moon size={17} /> : <Sun size={17} />}
         </button>
-        <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Let&apos;s talk</a>
+        <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Open channel</a>
         <button ref={menuButton} className="menu-toggle icon-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}>
           {open ? <X size={21} /> : <Menu size={21} />}
         </button>
@@ -80,7 +80,7 @@ export default function Navbar() {
       {open && <motion.nav id="mobile-menu" aria-label="Mobile navigation" className="mobile-menu" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduced ? 0 : -8 }} transition={{ duration: reduced ? 0 : 0.2, ease }}>
         {links}
         <button className="mobile-theme" onClick={toggleTheme}>{dark ? "Light mode" : "Dark mode"}{dark ? <Moon size={18} /> : <Sun size={18} />}</button>
-        <a href="#contact" className="mobile-contact" onClick={() => setOpen(false)}>Let&apos;s talk</a>
+        <a href="#contact" className="mobile-contact" onClick={() => setOpen(false)}>Open channel</a>
       </motion.nav>}
     </AnimatePresence>
   </header>;
